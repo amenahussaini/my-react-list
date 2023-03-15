@@ -52,6 +52,38 @@ header nav a {
     padding: 0 10px 0 0;
 }
 
+.movieItem, .about-container {
+  display: flex;
+  padding: 2rem;
+  background: #fff;
+  flex-wrap: wrap;
+  margin: 0 1rem;
+  width: 60%;
+  margin-bottom: 20px;
+  border-left: 2rem solid #61DAFB;
+  min-width: 255px
+}
+
+.detail-link {
+  font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #f0f0f0;
+    text-decoration: none;
+    border: 1px solid;
+    padding: 0.2rem 0.3rem;
+    font-weight: 600;
+}
+.back-link {
+  padding-bottom: 10px;
+}
+.movieItem-content {
+ 
+  padding: 1rem;
+ 
+}
+
 .search {
   width: 71%;
   margin: 4rem 0 2rem;

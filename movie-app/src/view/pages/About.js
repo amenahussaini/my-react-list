@@ -4,9 +4,12 @@ const About = () => {
  
 
   return (
-    <div>
-      <h4>Version 1.0.0</h4>
+    <div className='about-container'>
+      <div>
       <Link to='/'>Go Back</Link>
+      </div>
+      <h4>Version 1.0.0</h4>
+      
     </div>
   )
 }

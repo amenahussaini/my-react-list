@@ -14,11 +14,9 @@ const Header = ({ title }) => {
       <h1>{title}</h1>
         <nav>
             <Link to="About">About</Link>
-            <Link to="Movies">Movies</Link>
+            <Link to="MovieDetail">Movies</Link>
             <Link to="Other">Other</Link>
         </nav>
-        
-    
     </header>
   )
 }
