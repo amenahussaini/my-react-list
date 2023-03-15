@@ -1,12 +1,22 @@
 import React, { useState, useEffect } from 'react';
 
-import Header from './components/Header'
-import MovieCard from "./components/MovieCard";
-import SearchIcon from "./logo.svg";
-import Pagination from './components/Pagination';
-import axios from 'axios';
-import './App.css';
+import './includes/App.css';
+import SearchIcon from "./includes/search.svg";
 
+
+
+
+import Header from './view/shared/Header'
+import MovieCard from "./components/MovieCard";
+
+import Pagination from './components/Pagination';
+
+import axios from 'axios';
+
+import MovieDetail from './components/MovieDetail';
+import {Link} from "react-router-dom";
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 const API_URL = "http://www.omdbapi.com?apikey=b6003d8a";
 
 const App = () => {
@@ -35,6 +45,8 @@ const App = () => {
     setMovies(data.Search);
   };
 
+
+
   // Get current posts
   const indexOfLastPost = currentPage * moviesPerPage;
   const indexOfFirstPost = indexOfLastPost - moviesPerPage;
@@ -46,7 +58,7 @@ const App = () => {
 
   return (
     <div className='container app mt-5'>
-
+<Router>
 <Header />
 
 <div className="search">
@@ -74,12 +86,14 @@ const App = () => {
   </div>
 )}
 
-     
+     <MovieDetail />
+   
       <Pagination
         moviesPerPage={moviesPerPage}
         totalMovies={movies.length}
         paginate={paginate}
       />
+      </Router>
     </div>
   );
 };
